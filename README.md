@@ -4,4 +4,4 @@ This is a sidebar UI project with a dark theme using local storage. It can detec
 
 the project has been developed with sass and JavaScript without relying on any framework.
 
-[Live demo](https://sidebar-scss.netlify.app)
+[Live demo](https://sidebar-app.netlify.app)
