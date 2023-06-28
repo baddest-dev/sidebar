@@ -3,16 +3,10 @@ let isDark;
 
 //active links
 const links = document.querySelectorAll(".link");
-// remove active class to all links those might have it.
-const removeActiveCalss = ()=>{
-    links.forEach(link => {
-        link.classList.remove("active")
-    })
-};
 // adding active class to the clicking link
 links.forEach(link => {
     link.addEventListener("click",()=>{
-        removeActiveCalss()
+        document.querySelector(".active").classList.remove("active")
         link.classList.add("active")
     })
 });
@@ -30,8 +24,8 @@ function getItemToLS(){
     return localStorage.getItem("settings");
 }
 // add localStorage items
-function setItemToLS(item,value){
-    localStorage.setItem(`${item}`,JSON.stringify(value));
+function setItemToLS(item,data){
+    localStorage.setItem(`${item}`,JSON.stringify(data));
 }
 
 //handle sidebar collapsing;
