@@ -35,7 +35,13 @@ li {
 
 #sidebar {
   position: relative;
-  height: clamp(100vh, max-content, 712px);
+  height: max-content;
+  max-height: 768px;
+}
+@media (min-height: 700px) {
+  #sidebar {
+    height: 100vh;
+  }
 }
 #sidebar .link, #sidebar .link::before, #sidebar .dropdown, #sidebar #chevron,
 #sidebar .side-items, #sidebar .sidebar-toggler i, #sidebar .sidebar-toggler {
@@ -94,7 +100,6 @@ li {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  row-gap: 1.2rem;
 }
 #sidebar .profile {
   display: flex;
